@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<title>Flaskex</title>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="field">
+        <div class="container">
+          <span class="text is-small is-left">
+            Programme is running!
+          </span>
+          <br>
+          <a id="rerun-button" class="button is-primary is-inverted is-outlined" onclick="rerun()">
+            <span>Train another model</span>
+          </a>
+          <br>
+          <br>
+          <i><a id="feedback" class="feedback"></a></i>
+        </div>
+      </div>   
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}

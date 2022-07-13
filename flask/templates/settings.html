@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<title>Flaskex</title>
+<section class="hero is-primary is-bold is-small"">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="settings" class="settings-box">
+        <div class="settings-area">    
+          <h1 class="title">Path Settings</h1>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small is-left">
+                Python Path:
+              </span>
+              <input id="settings-pypath" class="settings-input" type="text" value="{{defaultPath.pythonPath}}">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Project Path:
+              </span>
+              <input id="settings-projectpath" class="settings-input" type="text" value="{{defaultPath.projectPath}}">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Train Code Path: <font color="black">ProjectPath/</font>
+              </span>
+              <input id="settings-trainpath" class="settings-input" type="text" value="{{defaultPath.trainPath}}">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Export Code Path: <font color="black">ProjectPath/</font>
+              </span>
+              <input id="settings-exportpath" class="settings-input" type="text" value="{{defaultPath.exportPath}}">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Convert Code Path: <font color="black">ProjectPath/</font>
+              </span>
+              <input id="settings-convertpath" class="settings-input" type="text" value="{{defaultPath.convertPath}}">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Data Path: <font color="black">ProjectPath/</font>
+              </span>
+              <input id="settings-datapath" class="settings-input" type="text" value="{{defaultPath.dataPath}}">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Config Path: <font color="black">ProjectPath/</font>
+              </span>
+              <input id="settings-configpath" class="settings-input" type="text" value="{{defaultPath.configPath}}">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Result Path: <font color="black">ProjectPath/</font>
+              </span>
+              <input id="settings-resultpath" class="settings-input" type="text" value="{{defaultPath.resultPath}}">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Preprocess Path (Optional): <font color="black">ProjectPath/</font>
+              </span>
+              <input id="settings-preprocesspath" class="settings-input" type="text" value="{{defaultPath.preprocessPath}}">
+            </div>
+          </div>
+          <br>
+          <a id="save-button" class="form-button button is-primary is-inverted is-outlined" onclick="savePath()">
+            <span>Save</span>
+          </a>
+          <br>
+          <br>
+          <i><a id="feedback" class="feedback"></a></i>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}

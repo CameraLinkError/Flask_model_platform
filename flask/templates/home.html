@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<title>Flaskex</title>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="settings" class="settings-box">
+        <div class="settings-area">    
+          <h1 class="title">Model</h1>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small is-left">
+                Model type:
+              </span>
+              <select id="settings-model-type" class="select">
+                <option value=0>Micron Cornelfill</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Branch:
+              </span>
+              <select id="settings-branch" class="select">
+                <option value=0>Development</option>
+                <option value=1>Prerelease</option>
+                <option value=2>Release</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Image width:
+              </span>
+              <input id="settings-image-width" type="number" value="640" step="160">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Image height:
+              </span>
+              <input id="settings-image-height" type="number" value="640" step="160">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Batch size:
+              </span>
+              <input id="settings-batch" type="number" value="16">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Epochs:
+              </span>
+              <input id="settings-epochs" type="number" value="2000" step="100">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <span class="text is-small">
+                Applying fp16 half precision:
+              </span>
+              <select id="settings-half-precision" class="select">
+                <option value=0>No</option>
+                <option value=1>Yes</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <p class="control">
+              <span class="text is-small is-left">
+                Message (optional):
+              </span>
+              <input id="settings-message" class="settings-input" type="text">
+            </p>
+          </div>  
+          <div class="field">
+            <p class="control">
+              <span class="text is-small is-left">
+                Result name:
+              </span>
+              <input id="settings-name" class="settings-input" type="text" value = "yolov5">
+            </p>
+          </div> 
+          <div class="field">
+            <p class="control">
+              <span class="text is-small is-left">
+                Extra arguments (optional):
+              </span>
+              <input id="settings-extra" class="settings-input" type="text" value="--cache">
+            </p>
+          </div>         
+          <br>
+          <a id="run-button" class="form-button button is-primary is-inverted is-outlined" onclick="run()">
+            <span>Run</span>
+          </a>
+          <br>
+          <br>
+          <i><a id="feedback" class="feedback"></a></i>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
