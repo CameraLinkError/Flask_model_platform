@@ -4,9 +4,9 @@
 ``` 
 pip install -r requirements.txt
 ```
+And add "py_cyberonnx.pyd" to the "DLLs" folder in your Python path.
 
 ## run
 ``` 
 python app.py
 ```
-or using 'launch.json' file in VSCode
