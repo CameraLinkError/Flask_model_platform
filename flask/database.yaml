@@ -1,9 +1,0 @@
-configPath: ''
-convertPath: utils/convert.py
-dataPath: ''
-exportPath: models/export.py
-preprocessPath: ''
-projectPath: ../YoloV5
-pythonPath: C:/Program Files/anaconda3/python.exe
-resultPath: runs/train
-trainPath: train.py
